@@ -1,11 +1,9 @@
 'use client'
 import {
-  BookMarked,
   Home,
   LayoutDashboard,
   LucideMessageCircleQuestion,
   MessageSquare,
-  NotebookText,
   Sidebar,
   User,
   UserCircle2,
@@ -31,21 +29,17 @@ export default function SidebarLayout() {
       <div className="transition-transform">
         {largeSider ? (
           <>
-            <LargeSideBarItems Icon={LayoutDashboard} url={'/'} title={'Dashboard'} />
-            <LargeSideBarItems Icon={LucideMessageCircleQuestion} url={'/mcq'} title={'MCQ'} />
-            <LargeSideBarItems Icon={UserCircle2} url={'/lessons'} title={'Lessons'} />
-            <LargeSideBarItems Icon={UserCircle2} url={'/shortnotes'} title={'Short Notes'} />
-            <LargeSideBarItems Icon={UserCircle2} url={'/pastpaper'} title={'Past Papers'} />
-            <LargeSideBarItems Icon={MessageSquare} url={'/notification'} title={'Notification'} />
+            <LargeSideBarItems Icon={LayoutDashboard} url={'/admin/dashboard'} title={'Dashboard'} />
+            <LargeSideBarItems Icon={LucideMessageCircleQuestion} url={'/admin/mcq'} title={'MCQ'} />
+            <LargeSideBarItems Icon={UserCircle2} url={'/admin/users'} title={'Users'} />
+            <LargeSideBarItems Icon={MessageSquare} url={'/admin/notification'} title={'Notification'} />
           </>
         ) : (
           <>
-            <SmallSideBarItems Icon={Home} url={'/'} title={'Home'} />
-            <SmallSideBarItems Icon={LucideMessageCircleQuestion} url={'/quiz'} title={'Quiz'} />
-            <SmallSideBarItems Icon={UserCircle2} url={'/lessons'} title={'Lessons'} />
-            <SmallSideBarItems Icon={NotebookText} url={'/shortnotes'} title={'Short Notes'} />
-            <SmallSideBarItems Icon={BookMarked} url={'/pastpaper'} title={'Past Papers'} />
-            <SmallSideBarItems Icon={MessageSquare} url={'/notification'} title={'Notification'} />
+            <SmallSideBarItems Icon={LayoutDashboard} url={'/admin/dashboard'} title={'Dashboard'} />
+            <SmallSideBarItems Icon={LucideMessageCircleQuestion} url={'/admin/mcq'} title={'MCQ'} />
+            <SmallSideBarItems Icon={UserCircle2} url={'/admin/users'} title={'Users'} />
+            <SmallSideBarItems Icon={MessageSquare} url={'/admin/notification'} title={'Notification'} />
           </>
         )}
       </div>
@@ -67,8 +61,8 @@ function LargeSideBarItems({ Icon, url, title }: { Icon: ElementType; url: strin
 function SmallSideBarItems({ Icon, url, title }: { Icon: ElementType; url: string; title: string }) {
   return (
     <Link href={url}>
-      <div className="flex flex-col items-center my-4  bg-slate-200 p-2.5 rounded-xl">
-        <Icon className="m-3" />
+      <div className="flex flex-col items-center gap-3 my-3 bg-slate-200 p-2.5 rounded-xl">
+        <Icon className="mt-1" />
         <div className="text-sm">{title}</div>
       </div>
     </Link>
