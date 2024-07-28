@@ -35,7 +35,7 @@ export default function SidebarLayout() {
             <LargeSideBarItems Icon={LucideMessageCircleQuestion} url={'/mcq'} title={'MCQ'} />
             <LargeSideBarItems Icon={UserCircle2} url={'/lessons'} title={'Lessons'} />
             <LargeSideBarItems Icon={UserCircle2} url={'/shortnotes'} title={'Short Notes'} />
-            <LargeSideBarItems Icon={UserCircle2} url={'/pastpaper'} title={'Past Papers'} />
+            <LargeSideBarItems Icon={UserCircle2} url={'/pas-tpaper'} title={'Past Papers'} />
             <LargeSideBarItems Icon={MessageSquare} url={'/notification'} title={'Notification'} />
           </>
         ) : (
@@ -44,7 +44,7 @@ export default function SidebarLayout() {
             <SmallSideBarItems Icon={LucideMessageCircleQuestion} url={'/quiz'} title={'Quiz'} />
             <SmallSideBarItems Icon={UserCircle2} url={'/lessons'} title={'Lessons'} />
             <SmallSideBarItems Icon={NotebookText} url={'/shortnotes'} title={'Short Notes'} />
-            <SmallSideBarItems Icon={BookMarked} url={'/pastpaper'} title={'Past Papers'} />
+            <SmallSideBarItems Icon={BookMarked} url={'/past-paper'} title={'Past Papers'} />
             <SmallSideBarItems Icon={MessageSquare} url={'/notification'} title={'Notification'} />
           </>
         )}
